@@ -1,0 +1,70 @@
+warning: LF will be replaced by CRLF in AgregarClientes.cpp.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in main.cpp.
+The file will have its original line endings in your working directory
+[1mdiff --git a/AgregarClientes.cpp b/AgregarClientes.cpp[m
+[1mindex 1416dfc..08ee697 100644[m
+[1m--- a/AgregarClientes.cpp[m
+[1m+++ b/AgregarClientes.cpp[m
+[36m@@ -14,6 +14,16 @@[m [mvoid agregarCliente()[m
+     ofstream datos;[m
+     datos.open("clientes.txt",ios::app); //Abre el archivo en modo de edición[m
+ [m
+[32m+[m[32m    /*[m
+[32m+[m[32m  (Nombre, # de cedula, direccion, telefono celular, género)[m
+[32m+[m[32mHabitaciones que posee el hotel: Existen hoteles con cuartos costosos (ejecutivos), económicos, etc.[m
+[32m+[m[32mAgregar la habitación que adquirió el cliente, cuántos días estará y cuánto le costará.[m
+[32m+[m
+[32m+[m[32m    */[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+     cout<<"Nuevo Registro de cliente"<<endl;[m
+     cout<<"Cedula: ";[m
+     gets(cliente1.Cedula);[m
+[36m@@ -35,6 +45,18 @@[m [mvoid agregarCliente()[m
+     gets(cliente1.Correo);[m
+     fflush(stdin);[m
+ [m
+[32m+[m[32m    cout<<"Genero: ";   //Genero[m
+[32m+[m[32m    gets(cliente1.Genero);[m
+[32m+[m[32m    fflush(stdin);[m
+[32m+[m
+[32m+[m[32m    cout<<"Habitacion: ";   //Habitacion[m
+[32m+[m[32m    gets(cliente1.Habitacion);[m
+[32m+[m[32m    fflush(stdin);[m
+[32m+[m
+[32m+[m[32m    cout<<"Estadia: ";    //Estadia[m
+[32m+[m[32m    gets(cliente1.Estadia);[m
+[32m+[m[32m    fflush(stdin);[m
+[32m+[m
+     fflush(stdout);[m
+ [m
+     datos<<cliente1.Cedula<<endl;[m
+[36m@@ -42,6 +64,9 @@[m [mvoid agregarCliente()[m
+     datos<<cliente1.Telefono<<endl;[m
+     datos<<cliente1.Direccion<<endl;[m
+     datos<<cliente1.Correo<<endl;[m
+[32m+[m[32m    datos<<cliente1.Genero<<endl;[m
+[32m+[m[32m    datos<<cliente1.Habitacion<<endl;[m
+[32m+[m[32m    datos<<cliente1.Estadia<<endl;[m
+ [m
+     datos.close();[m
+ }[m
+[1mdiff --git a/main.cpp b/main.cpp[m
+[1mindex f98ea5a..895f437 100644[m
+[1m--- a/main.cpp[m
+[1m+++ b/main.cpp[m
+[36m@@ -53,9 +53,8 @@[m [mint MenuPrincipal(int opc)[m
+ {[m
+     cout<<"  Proyecto Hotel \n\n";[m
+     cout<<" ===== MENU =====\n";[m
+[31m-    cout<<"| 1. Clientes    |\n";[m
+[31m-    cout<<"| 2. Salir       |\n";[m
+[31m-    cout<<" ----------------\n\n";[m
+[32m+[m[32m    cout<<" 1. Clientes    \n";[m
+[32m+[m[32m    cout<<" 2. Salir       \n";[m
+     cout<<"Opcion: ";[m
+     cin>>opc; // Almacena opcion del menú principal[m
+     fflush(stdin); // Limpieza de buffer entrada[m
