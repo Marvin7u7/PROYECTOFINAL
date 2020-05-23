@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1590267236 source:c:\users\usuario\desktop\proyecto1\menu.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	"Clientes.h"
+
+1590266537 source:c:\users\usuario\desktop\proyecto1\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	"Clientes.h"
+
+1590265412 c:\users\usuario\desktop\proyecto1\clientes.h
+
+1590267264 source:c:\users\usuario\desktop\proyecto1\agregarclientes.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	<fstream>
+	"Clientes.h"
+
