@@ -1,0 +1,134 @@
+// Codigo del main.cpp
+#include <iostream>
+#include <stdio.h>
+#include <windows.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fstream>
+#include "Cliente.h"
+
+void Menu();
+
+using namespace std;
+
+//int MenuPrincipal(int);
+
+int main()
+{
+    int opc;
+    do
+    {
+        switch(Menu_1(opc))
+        {
+        case 1:
+        {
+            system("cls");
+            Menu();
+            break;
+        }
+        case 2:
+        {
+            return 0;
+            break;
+        }
+        default:
+        {
+            break;
+        }
+        }
+
+    }
+    while(opc!=2);
+    return 0;
+}
+
+int Menu(int opc)
+{
+    cout<<"  Nombre de Proyecto \n\n";
+    cout<<"-----  MENU -----\n";
+    cout<<" 1. Clientes    \n";
+    cout<<" 2. Salir       \n";
+    cout<<" ----------------\n\n";
+    cout<<"Opcion: ";
+    cin>>opc;
+    fflush(stdin);
+    fflush(stdout);
+
+    return opc;
+}
+
+// Codigo de Menu.cpp
+#include <iostream>
+#include <stdio.h>
+#include <windows.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fstream>
+#include "Cliente.h"
+
+void Menu_1(int);
+void Cliente ();
+void Agregar_cliente ();
+void Datos_Hotel ();
+
+using namespace std;
+
+void Menu;
+{
+    system("cls");
+    int opc;
+    cout<<"-----Bienvenido al hotel Rise & Shine-----"<<endl;
+    cout<<" 1 - Agregar cliente \n"
+    cout<<" 2 - Datos del cliente \n";
+    cout<<" 3 - Datos de hotel \n;
+    cout<<" 4 - Salir \n";
+    cout<<"------------------------------------------"<<endl;
+    cout<<" Opcion: ";
+    cin>> opc;
+    fflush(stdin);
+    fflush(stdout);
+
+    switch(opc);
+    {
+    case 1:
+
+        Agregar_cliente();
+        break;
+
+    case 2:
+        system("cls");
+        cout"-----Listado del cliente-----"<<endl;
+        Cliente();
+        break;
+
+    case 3:
+        system("cls");
+        Datos_Hotel();
+        break;
+
+    case 4:
+        system("cls");
+        Menu_1();
+        break;
+
+    }
+
+}
+
+
+// Codigo de Cliente.h
+#ifndef CLIENTE_H_INCLUDED
+#define CLIENTE_H_INCLUDED
+
+typedef struct
+{
+    char nombre[50];
+    char cedula[50];
+    char telefono[50];
+    char correo[50];
+    char habitacion[50];
+    char estadia[50];
+
+}Cliente;
+
+#endif // CLIENTE_H_INCLUDED
