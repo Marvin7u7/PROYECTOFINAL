@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1590541062 source:c:\users\ismael\desktop\proyecto numero 1,000\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	<fstream>
+	"Cliente.h"
+
+1590524221 c:\users\ismael\desktop\proyecto numero 1,000\cliente.h
+
